@@ -15,7 +15,7 @@ The dataset used here comes from the Bigfoot Field Researchers Organization (BFR
 
 ## Plot 1 – Temperature of Sightings Over Time
 
-<img src="/IS445-HW5/assets/hw5_temp_max_min.png" alt="Temperature of Sightings Over Time" style="max-width:100%; height:auto;">
+<img src="/IS445-HW5/assets/hw5_temp_scatter.png" alt="Temperature of Sightings Over Time" style="max-width:100%; height:auto;">
 
 In the first plot, I visualize the relationship between the **year** of each Bigfoot sighting and the **mid-temperature (`temperature_mid`)** at the time of that sighting. Each point in the scatter plot represents a single report: the horizontal position encodes the **year** (temporal variable) and the vertical position encodes the **temperature at the time of the sighting** (quantitative variable). I use a simple scatterplot with a moderate alpha value (`alpha = 0.5`) to reduce overplotting and make dense regions easier to see. The main encoding types here are **position (x)** for time and **position (y)** for temperature; transparency serves as an implicit density cue, with darker areas indicating many overlapping points. On the analysis side, I first converted the original `date` column to a proper datetime type and then created a new `year` column from it so that temporal patterns could be plotted along a continuous axis. This plot provides an overall view of how temperatures at the time of sightings are distributed over the full time span of the dataset and whether sightings tend to cluster around warmer or cooler conditions.
 
@@ -23,10 +23,10 @@ In the first plot, I visualize the relationship between the **year** of each Big
 
 ## Plot 2 – Yearly Temperature Summary Statistics (Interactive)
 
-<div style="width:100%; max-width:900px; margin: 1rem 0;">
+<div style="width:100%; max-width:700px; margin: 1rem 0;">
   <iframe
     src="/IS445-HW5/assets/hw5_temp_stats.html"
-    width="90%"
+    width="100%"
     height="500"
     style="border:none;"
   ></iframe>
